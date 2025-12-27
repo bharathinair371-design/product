@@ -1,0 +1,9 @@
+.card-row {
+  display: flex;
+  gap: 20px;          /* space between cards */
+  flex-wrap: wrap;    /* next row if no space */
+}
+
+.card {
+  width: 18rem;
+}
