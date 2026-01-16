@@ -7,10 +7,7 @@ import { Injectable } from '@angular/core';
 export class Apiservice {
   constructor(private http:HttpClient){}
   getproduct(){
-    return this.http.get('https://fakestoreapi.com/products')
+    return this.http.get('https://dummyjson.com/posts')
   }
- getsingleproducts(id:string)
- {
-  return this.http.get(`https://fakestoreapi.com/products/${id}`)
-}
+
 }

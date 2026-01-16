@@ -1,13 +1,23 @@
-<div class="card-container">
-    @for(item of product;track item.id)
-    {
-        <div class="card">
-            <img src="{{item.image}}" alt="Product image" class="product-image">
-            <h2>{{item.title}}</h2>
-            <p>{{item.price}}</p>
+<div class="product-container">
+  <h2>Post List</h2>
 
-            <a [routerLink]="['/singleview-list',item.id]">Goto</a>        
-        </div>
-    }
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let item of product">
 
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.body }}</p>
+
+      <!-- Tags -->
+      <div class="tags">
+        <span class="tag" *ngFor="let tag of item.tags">
+          #{{ tag }}
+        </span>
+      </div>
+
+      <p><strong>Reactions:</strong> {{ item.reactions }}</p>
+
+     
+
+    </div>
+  </div>
 </div>
